@@ -49,12 +49,48 @@ function switchTab(type) {
     }
 }
 
-function handleLogin(e) {
-    e.preventDefault();
-    alert("Successfully Login!");
+// function handleLogin(e) {
+//     e.preventDefault();
+//     alert("Successfully Login!");
+// }
+
+// function handleRegister(e) {
+//     e.preventDefault();
+//     alert("Successfully Register!");
+// }
+
+
+
+function handleRegister(event) {
+    // Perform your checks
+    if (document.getElementsByName('username')[0].value === "") {
+        alert("Name is required!");
+        event.preventDefault(); // Stop submission because there is an error
+        return false;
+    }
+    
+    // If everything is okay, DON'T call preventDefault()
+    // The form will now continue to your PHP script.
+    return true; 
 }
 
-function handleRegister(e) {
-    e.preventDefault();
-    alert("Successfully Register!");
-}
+
+// gallary //
+document.getElementById('load-more-btn').addEventListener('click', function() {
+    // Select all hidden gallery items
+    const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
+    
+    // We want to show the next 4 items
+    const itemsToShow = 4;
+
+    for (let i = 0; i < itemsToShow; i++) {
+        if (hiddenItems[i]) {
+            hiddenItems[i].classList.remove('hidden');
+        }
+    }
+
+    // If no more hidden items left, hide the button
+    // if (document.querySelectorAll('.gallery-item.hidden').length === 0) {
+    //     this.style.display = 'none';
+    // }
+});
