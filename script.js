@@ -1,23 +1,23 @@
-// 5. 3D Tilt Card Interaction (Vanilla implementation)
-document.querySelectorAll('.tilt-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const { left, top, width, height } = card.getBoundingClientRect();
-        const x = (e.clientX - left) / width - 0.5;
-        const y = (e.clientY - top) / height - 0.5;
+// // 5. 3D Tilt Card Interaction (Vanilla implementation)
+// document.querySelectorAll('.tilt-card').forEach(card => {
+//     card.addEventListener('mousemove', (e) => {
+//         const { left, top, width, height } = card.getBoundingClientRect();
+//         const x = (e.clientX - left) / width - 0.5;
+//         const y = (e.clientY - top) / height - 0.5;
 
-        gsap.to(card, {
-            rotationY: x * 20,
-            rotationX: -y * 20,
-            transformPerspective: 1000,
-            ease: "power1.out",
-            duration: 0.3
-        });
-    });
+//         gsap.to(card, {
+//             rotationY: x * 20,
+//             rotationX: -y * 20,
+//             transformPerspective: 1000,
+//             ease: "power1.out",
+//             duration: 0.3
+//         });
+//     });
 
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, { rotationY: 0, rotationX: 0, duration: 0.5 });
-    });
-});
+//     card.addEventListener('mouseleave', () => {
+//         gsap.to(card, { rotationY: 0, rotationX: 0, duration: 0.5 });
+//     });
+// });
 
 
 
