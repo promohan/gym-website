@@ -1037,15 +1037,19 @@
           }
       }
 .fab{
-    color:palevioletred;
+    color:#fff;
 }
 .fa-facebook{
-    color:blue;
+    color:#fff;
     /* padding: 10px; */
     font-size:20px;
     /* background-color: white; */
 }
-
+.pro-card{
+    color: white;
+    text-decoration-line: none;
+    
+}
 
       /* .ram {
           font-size: 150px;
